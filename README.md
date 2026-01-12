@@ -51,7 +51,7 @@ The robot perceives the environment through the following normalized signals:
 - Joint velocities (29).
 - Base State: Base angular velocity (3) and Projected gravity vector (3).
 - History: Last actions (29).
-- Command: Target velocities (Vx, Vy, Wz) (3).
+- Command: Target velocities ($v_{x}$,$v_{y}$,$w_{z}$) (3).
 #### Action Space (29 dimensions) 
 - Output: Target joint positions for the 29-DoF robot.
 - Scaling: Actions are scaled by a factor of 0.25 before being added to the nominal standing pose.
@@ -73,8 +73,8 @@ To ensure the robot can withstand 1500N pushes without falling early in training
 The reward function is designed to help robot standing while enforcing stability constraints:
 | Component           | Weight   | Description                |
 | :--------           | :------- | :------------------------- |
-| `tracking_lin_vel`  | `1.5`    | Encourages the robot to follow target linear velocities (Vxy = 0). |
-| `tracking_ang_vel`  | `0.5`    | Encourages the robot to follow target angular velocities (Wz = 0). |             
+| `tracking_lin_vel`  | `1.5`    | Encourages the robot to follow target linear velocities ($v_{x,y} = 0$). |
+| `tracking_ang_vel`  | `0.5`    | Encourages the robot to follow target angular velocities ($w_{z} = 0$). |             
 | `lin_vel_z`         | `-2.0`   | Penalizes vertical velocity of the robot base. Discourages hopping, jumping, or jittery vertical motions. Ensures the robot maintains stable ground contact |
 | `base_height`       | `-50.0`  | Heavy penalty based on the deviation of the base height from the target standing height. Teaches the robot that maintaining an upright standing posture is the most critical objective |
 | `action_rate`       | `-0.005` | Penalizes the difference between the current action and the previous action. Encourages smooth control policies |
