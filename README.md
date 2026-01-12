@@ -4,7 +4,7 @@
 
 
 ## 1. Project Overview
-his project implements a **Reinforcement Learning (RL)** policy for the **Unitree G1 Humanoid** robot using **Genesis Sim**. 
+This project implements a **Reinforcement Learning (RL)** policy for the **Unitree G1 Humanoid** robot using **Genesis Sim**. 
 
 The goal is to achieve **Robust Push Recovery**: training the robot to maintain balance and recover from significant external forces (up to 1500N in 1 step) while tracking zero-velocity commands (standing still).
 
