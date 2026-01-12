@@ -51,7 +51,7 @@ The robot perceives the environment through the following normalized signals:
 - Joint velocities (29).
 - Base State: Base angular velocity (3) and Projected gravity vector (3).
 - History: Last actions (29).
-- Command: Target velocities ($v_{x}$,$v_{y}$,$w_{z}$) (3).
+- Command: Target velocities ( $v_{x}$, $v_{y}$ , $w_{z}$ ) (3).
 #### Action Space (29 dimensions) 
 - Output: Target joint positions for the 29-DoF robot.
 - Scaling: Actions are scaled by a factor of 0.25 before being added to the nominal standing pose.
