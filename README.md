@@ -138,7 +138,8 @@ $$R_{action\_rate} = \| \mathbf{a}_{t} - \mathbf{a}_{t-1} \|^2$$
 ```
 
 Where:
-- ${a}_t$ and ${a}_{t-1}$ are the action vectors at the current and previous time steps.
+- $a_{t}$ action vectors at the current time step.
+- $a_{t-1}$ action vectors at the previous time steps.
 
 #### 3.4.6 **Vertical Velocity Penalty**
 
@@ -160,7 +161,7 @@ $$R_{orient} = \| \mathbf{g}_{proj, xy} \|^2 = (g_{proj, x})^2 + (g_{proj, y})^2
 ```
 
 Where:
-- ${g}_{proj}$ is the gravity vector $[0, 0, -1]$ rotated into the robot's base frame. When standing perfectly upright, $g_{proj, x} \approx 0$ and $g_{proj, y} \approx 0$.
+- ${g}_{proj}$ is the gravity vector rotated into the robot's base frame. 
 
 ---
 
