@@ -26,7 +26,7 @@ from g1_env import g1Env
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("-e", "--exp_name", type=str, default="g1-push")
-    parser.add_argument("--ckpt", type=int, default=850)
+    parser.add_argument("--ckpt", type=int, default=999)
     args = parser.parse_args()
 
     gs.init(backend=gs.gpu, precision="32", logging_level="warning")
@@ -42,8 +42,8 @@ def main():
     env_cfg["push_params"].update(
         {
             "enable": True,
-            "min_force": 2000.0,  # Apply max force
-            "max_force": 2000.0,
+            "min_force": 1500.0,  # Apply max force
+            "max_force": 1500.0,
             "start_interval": 50,  # Push every 1 seconds
             "end_interval": 50,
             "curriculum_steps": 1,  # Skip curriculum

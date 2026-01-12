@@ -13,12 +13,14 @@ The goal is to achieve **Robust Push Recovery**: training the robot to maintain 
 ```bash
 git clone https://github.com/datvu352k4/humanoid_g1_ws.git 
 cd humanoid_g1_ws
+python3 -m venv venv
 pip install -r requirements.txt
 ```
 ### Training new policy 
 To start training the policy with Curriculum Learning:
 ```bash 
 cd humanoid_g1_ws
+source venv/bin/activate
 python src/g1_train.py --exp_name g1-push --num_envs 8192 --max_iterations 1000
 ```
 Output: Checkpoints are saved in logs/g1-push.
@@ -27,7 +29,8 @@ Output: Checkpoints are saved in logs/g1-push.
 To visualize the trained policy and test robustness against Maximum Force:
 ```bash 
 cd humanoid_g1_ws
-python src/g1_eval.py --exp_name g1-push --ckpt 900
+source venv/bin/activate
+python src/g1_eval.py --exp_name g1-push --ckpt 999
 tensorboard --logdir logs
 ```
 
@@ -189,5 +192,6 @@ Although the primary task is to stand still, the Tracking reward is essential. B
 ## References
 
  - [Genesis Sim](https://github.com/Genesis-Embodied-AI/Genesis)
+ - [Unitree G1](https://github.com/unitreerobotics/unitree_ros/tree/master/robots/g1_description)
 
 
