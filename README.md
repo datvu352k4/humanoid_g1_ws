@@ -122,7 +122,7 @@ Where:
 To keep the robot's joint poses close to a natural configuration, an L1-norm penalty is applied to joint deviations:
 
 ```math
-R_{pose\_similarity} = \|q - q_{default}\|^2
+$$R_{default} = \sum_{i=1}^{29} | q_i - q^{default}_i |$$
 ```
 
 Where:
@@ -138,7 +138,7 @@ $$R_{action\_rate} = \| \mathbf{a}_{t} - \mathbf{a}_{t-1} \|^2$$
 ```
 
 Where:
-- $\mathbf{a}_t$ and $\mathbf{a}_{t-1}$ are the action vectors at the current and previous time steps.
+- ${a}_t$ and ${a}_{t-1}$ are the action vectors at the current and previous time steps.
 
 #### 3.4.6 **Vertical Velocity Penalty**
 
@@ -160,7 +160,7 @@ $$R_{orient} = \| \mathbf{g}_{proj, xy} \|^2 = (g_{proj, x})^2 + (g_{proj, y})^2
 ```
 
 Where:
-- $\mathbf{g}_{proj}$ is the gravity vector $[0, 0, -1]$ rotated into the robot's base frame. When standing perfectly upright, $g_{proj, x} \approx 0$ and $g_{proj, y} \approx 0$.
+- ${g}_{proj}$ is the gravity vector $[0, 0, -1]$ rotated into the robot's base frame. When standing perfectly upright, $g_{proj, x} \approx 0$ and $g_{proj, y} \approx 0$.
 
 ---
 
