@@ -6,7 +6,7 @@
 ## 1. Project Overview
 his project implements a **Reinforcement Learning (RL)** policy for the **Unitree G1 Humanoid** robot using **Genesis Sim**. 
 
-The goal is to achieve **Robust Push Recovery**: training the robot to maintain balance and recover from significant external forces (up to 2000N in 1 step) while tracking zero-velocity commands (standing still).
+The goal is to achieve **Robust Push Recovery**: training the robot to maintain balance and recover from significant external forces (up to 1500N in 1 step) while tracking zero-velocity commands (standing still).
 
 ## 2. CLI Documentation (How to Run)
 ### Installation
@@ -59,10 +59,10 @@ The robot perceives the environment through the following normalized signals:
 action_total = self.q_homing + residual_action_nn
 ```
 ### 3.3 Robustness Strategy (Curriculum Learning)
-To ensure the robot can withstand 2000N pushes without falling early in training, a sliding-window curriculum is implemented:
+To ensure the robot can withstand 1500N pushes without falling early in training, a sliding-window curriculum is implemented:
 
 #### Force Magnitude: 
-- Linearly increases from 50N (Start) to 2000N (End).
+- Linearly increases from 50N (Start) to 1500N (End).
 
 #### Push Frequency:
 
