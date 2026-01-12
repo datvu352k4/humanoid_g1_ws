@@ -81,7 +81,7 @@ The reward function is designed to help robot standing while enforcing stability
 | `similar_to_default`| `-0.1`   | Penalizes joint positions that deviate significantly from the nominal standing pose.                            |
 | `orientation`       | `-5.0`   | Penalizes body tilt (pitch and roll) relative to the gravity vector. Enforces an upright torso. Keeping the body vertically aligned is crucial for push recovery |
 
-#### 1. **Linear Velocity Tracking Reward**
+#### a. **Linear Velocity Tracking Reward**
 
 The robot is encouraged to track $v_x, v_y$ references commanded by the user.
 
@@ -93,7 +93,7 @@ Where:
 - $v^{ref}_{xy} = [v_x^{ref}, v_y^{ref}]$ is the commanded velocity.
 - $v_{xy} = [v_x, v_y]$ is the actual velocity.
 
-#### 2. **Angular Velocity Tracking Reward**
+#### b. **Angular Velocity Tracking Reward**
 
 The robot is encouraged to track $w_z$ reference commanded by the user.
 
@@ -183,6 +183,5 @@ Although the primary task is to stand still, the Tracking reward is essential. B
 ## References
 
  - [Genesis Sim](https://github.com/Genesis-Embodied-AI/Genesis)
- - [Awesome README](https://github.com/matiassingers/awesome-readme)
- - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
+
 
