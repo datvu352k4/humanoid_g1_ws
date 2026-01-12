@@ -1,0 +1,11 @@
+# --- Virtual Environment ---
+venv/
+env/
+.env
+
+__pycache__/
+*.pyc
+
+.vscode/
+
+.DS_Store
