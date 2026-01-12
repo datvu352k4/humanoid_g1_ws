@@ -81,33 +81,33 @@ The reward function is designed to help robot standing while enforcing stability
 | `similar_to_default`| `-0.1`   | Penalizes joint positions that deviate significantly from the nominal standing pose.                            |
 | `orientation`       | `-5.0`   | Penalizes body tilt (pitch and roll) relative to the gravity vector. Enforces an upright torso. Keeping the body vertically aligned is crucial for push recovery |
 
-#### a. **Linear Velocity Tracking Reward**
+#### 3.4.1 **Linear Velocity Tracking Reward**
 
-The robot is encouraged to track $v_x, v_y$ references commanded by the user.
+Track $v_x, v_y$ references commanded.
 
 ```math
-R_{lin\_vel} = \exp[-\|v^{ref}_{xy} - v_{xy}\|^2]
+$$R_{lin\_vel} = \exp \left( \frac{- \| \mathbf{v}^{cmd}_{xy} - \mathbf{v}_{xy} \|^2}{\sigma} \right)$$
 ```
 
 Where:
 - $v^{ref}_{xy} = [v_x^{ref}, v_y^{ref}]$ is the commanded velocity.
 - $v_{xy} = [v_x, v_y]$ is the actual velocity.
+- $\sigma$ is the tracking sigma.
+#### 3.4.2 **Angular Velocity Tracking Reward**
 
-#### b. **Angular Velocity Tracking Reward**
-
-The robot is encouraged to track $w_z$ reference commanded by the user.
+Track $w_z$ reference commanded.
 
 ```math
-R_{ang\_vel} = \exp[-(w^{ref}_{z} - w_{z})^2]
+$$R_{ang\_vel} = \exp \left( \frac{- (\omega^{cmd}_{z} - \omega_{z})^2}{\sigma} \right)$$
 ```
 
 Where:
 - $w_{cmd,z}$ is the commanded yaw velocity.
 - $w_{base,z}$ is the actual yaw velocity.
 
-#### 3. **Height Penalty**
+#### 3.4.3 **Height Penalty**
 
-The robot is encouraged to maintain a desired height as specified by the commanded altitude. A penalty is applied for deviations from this target height:
+The robot is encouraged to maintain a desired standing height.
 
 $$
 R_{z} = (z - z_{ref})^2
@@ -117,9 +117,9 @@ Where:
 - $z$ is the current base height.
 - $z_{ref}$ is the target height specified in the commands.
 
-#### 4. **Pose Similarity Reward**
+#### 3.4.4 **Pose Similarity Reward**
 
-To keep the robot's joint poses close to a default configuration, a penalty is applied for large deviations from the default joint positions:
+To keep the robot's joint poses close to a natural configuration, an L1-norm penalty is applied to joint deviations:
 
 ```math
 R_{pose\_similarity} = \|q - q_{default}\|^2
@@ -129,20 +129,20 @@ Where:
 - $q$ is the current joint position.
 - $q_{default}$ is the default joint position.
 
-#### 5. **Action Rate Penalty**
+#### 3.4.5 **Action Rate Penalty**
 
 To ensure smooth control and discourage abrupt changes in actions, a penalty is applied based on the difference between consecutive actions:
 
 ```math
-R_{action\_rate} = \|a_{t} - a_{t-1}\|^2
+$$R_{action\_rate} = \| \mathbf{a}_{t} - \mathbf{a}_{t-1} \|^2$$
 ```
 
 Where:
-- $a_t$ and $a_{t-1}$ are the actions at the current and previous time steps, respectively.
+- $\mathbf{a}_t$ and $\mathbf{a}_{t-1}$ are the action vectors at the current and previous time steps.
 
-#### 6. **Vertical Velocity Penalty**
+#### 3.4.6 **Vertical Velocity Penalty**
 
-To discourage unnecessary movement along the vertical ($z$) axis, a penalty is applied to the squared $z$-axis velocity of the base when the robot is not actively jumping. The reward is:
+To discourage unnecessary movement along the vertical axis (hopping/vibration)
 
 ```math
 R_{lin\_vel\_z} = v_{z}^2
@@ -151,17 +151,16 @@ R_{lin\_vel\_z} = v_{z}^2
 Where:
 - $v_{z}$ is the vertical velocity of the base.
 
-#### 7. **Roll and Pitch Stabilization Penalty**
+#### 3.4.7 **Roll and Pitch Stabilization Penalty**
 
-To ensure the robot maintains stability, a penalty is applied to discourage large roll and pitch deviations of the base. This reward is:
+To ensure the robot maintains an upright torso, the penalty minimizes the horizontal components ($x, y$) of the gravity vector projected onto the robot's base frame:
 
 ```math
-R_{roll\_pitch} = roll^2 + pitch^2
+$$R_{orient} = \| \mathbf{g}_{proj, xy} \|^2 = (g_{proj, x})^2 + (g_{proj, y})^2$$
 ```
 
 Where:
-- $roll$ is the roll angle of the base.
-- $pitch$ is the pitch angle of the base.
+- $\mathbf{g}_{proj}$ is the gravity vector $[0, 0, -1]$ rotated into the robot's base frame. When standing perfectly upright, $g_{proj, x} \approx 0$ and $g_{proj, y} \approx 0$.
 
 ---
 
