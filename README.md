@@ -28,13 +28,14 @@ To visualize the trained policy and test robustness against Maximum Force:
 ```bash 
 cd humanoid_g1_ws
 python src/g1_eval.py --exp_name g1-push --ckpt 900
+tensorboard --logdir logs
 ```
 
 ## 3.Technical Summary
 ### 3.1 Simulation Setup
-Simulator: Genesis Sim.
+#### Simulator: Genesis Sim.
 
-Physics Config:
+#### Physics Config:
 - dt: 0.02s (50Hz Control Frequency).
 
 - substeps: 12 (600Hz Physics Frequency): high substeps are crucial to prevent simulation instability during high-impact collisions.
@@ -43,8 +44,8 @@ Physics Config:
 ### 3.2 RL Configuration
 
 #### The agent is trained using PPO
-- Network Architecture: Actor-Critic MLP [512, 256, 128] with ELU activation.
-- Control Scheme: PD Position Control (Kp=100, Kd=5).
+- Network Architecture: Actor-Critic MLP **[512, 256, 128]** with **ELU** activation.
+- Control Scheme: **PD Position Control** (Kp=100, Kd=5).
 #### Observation Space (96 dimensions)
 The robot perceives the environment through the following normalized signals:
 - Joint positions (relative to nominal pose) (29). 
@@ -56,7 +57,7 @@ The robot perceives the environment through the following normalized signals:
 - Output: Target joint positions for the 29-DoF robot.
 - Scaling: Actions are scaled by a factor of 0.25 before being added to the nominal standing pose.
 ```
-action_total = self.q_homing + residual_action_nn
+action_total = self.q_homing + scaling_factor * action_nn
 ```
 ### 3.3 Robustness Strategy (Curriculum Learning)
 To ensure the robot can withstand 1500N pushes without falling early in training, a sliding-window curriculum is implemented:
@@ -64,11 +65,14 @@ To ensure the robot can withstand 1500N pushes without falling early in training
 #### Force Magnitude: 
 - Linearly increases from 50N (Start) to 1500N (End).
 
+#### Force Application (Direction & Location)
+- External forces are applied to a pre-defined set of key links on the robot's body (Torso, Pelvis, Shoulders,...) in random horizontal directions.
+
 #### Push Frequency:
 
 - Early Stage: Pushes occur every 2.0s (Interval=100). Helps the robot adapt to constant small noise.
 
-- Late Stage: Pushes occur every 1.0s (Interval=50). Allows the robot sufficient time to perform recovery steps and stabilize after massive impacts.
+- Late Stage: Pushes occur every 1.0s (Interval=50). Challenges the robot to perform rapid recovery steps.
 ### 3.4 Reward Shaping Strategy
 The reward function is designed to help robot standing while enforcing stability constraints:
 | Component           | Weight   | Description                |
@@ -179,6 +183,8 @@ Although the primary task is to stand still, the Tracking reward is essential. B
 ├── requirements.txt
 └── README.md
 ```
+
+
 
 ## References
 

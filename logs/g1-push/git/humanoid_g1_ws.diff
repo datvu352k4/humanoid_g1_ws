@@ -1,17 +1,11 @@
 --- git status ---
 On branch main
-Your branch is ahead of 'origin/main' by 2 commits.
-  (use "git push" to publish your local commits)
-
-Changes to be committed:
-  (use "git restore --staged <file>..." to unstage)
-	modified:   logs/g1-push/events.out.tfevents.1768228235.datvu-G7-KE.68093.0
+Your branch is up to date with 'origin/main'.
 
 Changes not staged for commit:
   (use "git add/rm <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
-	modified:   logs/g1-push/cfgs.pkl
-	deleted:    logs/g1-push/events.out.tfevents.1768228235.datvu-G7-KE.68093.0
+	deleted:    logs/g1-push/events.out.tfevents.1768233738.datvu-G7-KE.89482.0
 	modified:   logs/g1-push/git/humanoid_g1_ws.diff
 	modified:   logs/g1-push/model_0.pt
 	deleted:    logs/g1-push/model_100.pt
@@ -19,323 +13,391 @@ Changes not staged for commit:
 	deleted:    logs/g1-push/model_200.pt
 	deleted:    logs/g1-push/model_250.pt
 	deleted:    logs/g1-push/model_300.pt
-	deleted:    logs/g1-push/model_350.pt
-	deleted:    logs/g1-push/model_400.pt
-	deleted:    logs/g1-push/model_450.pt
 	deleted:    logs/g1-push/model_50.pt
-	deleted:    logs/g1-push/model_500.pt
-	deleted:    logs/g1-push/model_550.pt
-	deleted:    logs/g1-push/model_600.pt
-	deleted:    logs/g1-push/model_650.pt
-	deleted:    logs/g1-push/model_700.pt
-	deleted:    logs/g1-push/model_750.pt
-	deleted:    logs/g1-push/model_800.pt
-	modified:   src/g1_eval.py
-	modified:   src/g1_train.py
 
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
-	logs/g1-push/events.out.tfevents.1768233738.datvu-G7-KE.89482.0
- 
+	logs/g1-push/events.out.tfevents.1768238096.datvu-G7-KE.100161.0
+
+no changes added to commit (use "git add" and/or "git commit -a") 
 
 
 --- git diff ---
-diff --git a/logs/g1-push/cfgs.pkl b/logs/g1-push/cfgs.pkl
-index 9baaeb3..c49d122 100644
-Binary files a/logs/g1-push/cfgs.pkl and b/logs/g1-push/cfgs.pkl differ
-diff --git a/logs/g1-push/events.out.tfevents.1768228235.datvu-G7-KE.68093.0 b/logs/g1-push/events.out.tfevents.1768228235.datvu-G7-KE.68093.0
+diff --git a/logs/g1-push/events.out.tfevents.1768233738.datvu-G7-KE.89482.0 b/logs/g1-push/events.out.tfevents.1768233738.datvu-G7-KE.89482.0
 deleted file mode 100644
-index b7f2daf..0000000
-Binary files a/logs/g1-push/events.out.tfevents.1768228235.datvu-G7-KE.68093.0 and /dev/null differ
+index 43851b2..0000000
+Binary files a/logs/g1-push/events.out.tfevents.1768233738.datvu-G7-KE.89482.0 and /dev/null differ
 diff --git a/logs/g1-push/git/humanoid_g1_ws.diff b/logs/g1-push/git/humanoid_g1_ws.diff
-index e2a7a94..e69de29 100644
+index 173e670..e69de29 100644
 --- a/logs/g1-push/git/humanoid_g1_ws.diff
 +++ b/logs/g1-push/git/humanoid_g1_ws.diff
-@@ -1,193 +0,0 @@
+@@ -1,341 +0,0 @@
 ---- git status ---
 -On branch main
--Your branch is up to date with 'origin/main'.
+-Your branch is ahead of 'origin/main' by 2 commits.
+-  (use "git push" to publish your local commits)
+-
+-Changes to be committed:
+-  (use "git restore --staged <file>..." to unstage)
+-	modified:   logs/g1-push/events.out.tfevents.1768228235.datvu-G7-KE.68093.0
 -
 -Changes not staged for commit:
 -  (use "git add/rm <file>..." to update what will be committed)
 -  (use "git restore <file>..." to discard changes in working directory)
--	deleted:    logs/g1-push-curriculum/cfgs.pkl
--	deleted:    logs/g1-push-curriculum/events.out.tfevents.1768064090.datvu-G7-KE.79363.0
--	deleted:    logs/g1-push-curriculum/model_0.pt
--	deleted:    logs/g1-push-curriculum/model_100.pt
--	deleted:    logs/g1-push-curriculum/model_150.pt
--	deleted:    logs/g1-push-curriculum/model_200.pt
--	deleted:    logs/g1-push-curriculum/model_250.pt
--	deleted:    logs/g1-push-curriculum/model_300.pt
--	deleted:    logs/g1-push-curriculum/model_350.pt
--	deleted:    logs/g1-push-curriculum/model_400.pt
--	deleted:    logs/g1-push-curriculum/model_450.pt
--	deleted:    logs/g1-push-curriculum/model_50.pt
--	deleted:    logs/g1-push-curriculum/model_500.pt
--	deleted:    logs/g1-push-curriculum/model_550.pt
--	deleted:    logs/g1-push-curriculum/model_600.pt
--	deleted:    logs/g1-push-curriculum/model_650.pt
--	deleted:    logs/g1-push-curriculum/model_700.pt
--	deleted:    logs/g1-push-curriculum/model_750.pt
--	deleted:    logs/g1-push-curriculum/model_800.pt
--	deleted:    logs/g1-push-curriculum/model_850.pt
--	deleted:    logs/g1-push-curriculum/model_900.pt
--	deleted:    logs/g1-push-curriculum/model_950.pt
--	deleted:    logs/g1-push-curriculum/model_999.pt
 -	modified:   logs/g1-push/cfgs.pkl
--	deleted:    logs/g1-push/events.out.tfevents.1768222189.datvu-G7-KE.48412.0
+-	deleted:    logs/g1-push/events.out.tfevents.1768228235.datvu-G7-KE.68093.0
+-	modified:   logs/g1-push/git/humanoid_g1_ws.diff
 -	modified:   logs/g1-push/model_0.pt
+-	deleted:    logs/g1-push/model_100.pt
+-	deleted:    logs/g1-push/model_150.pt
+-	deleted:    logs/g1-push/model_200.pt
+-	deleted:    logs/g1-push/model_250.pt
+-	deleted:    logs/g1-push/model_300.pt
+-	deleted:    logs/g1-push/model_350.pt
+-	deleted:    logs/g1-push/model_400.pt
+-	deleted:    logs/g1-push/model_450.pt
 -	deleted:    logs/g1-push/model_50.pt
+-	deleted:    logs/g1-push/model_500.pt
+-	deleted:    logs/g1-push/model_550.pt
+-	deleted:    logs/g1-push/model_600.pt
+-	deleted:    logs/g1-push/model_650.pt
+-	deleted:    logs/g1-push/model_700.pt
+-	deleted:    logs/g1-push/model_750.pt
+-	deleted:    logs/g1-push/model_800.pt
 -	modified:   src/g1_eval.py
 -	modified:   src/g1_train.py
 -
 -Untracked files:
 -  (use "git add <file>..." to include in what will be committed)
--	logs/g1-push/events.out.tfevents.1768228235.datvu-G7-KE.68093.0
--	logs/g1-push/git/
--
--no changes added to commit (use "git add" and/or "git commit -a") 
+-	logs/g1-push/events.out.tfevents.1768233738.datvu-G7-KE.89482.0
+- 
 -
 -
 ---- git diff ---
--diff --git a/logs/g1-push-curriculum/cfgs.pkl b/logs/g1-push-curriculum/cfgs.pkl
--deleted file mode 100644
--index 7dfe176..0000000
--Binary files a/logs/g1-push-curriculum/cfgs.pkl and /dev/null differ
--diff --git a/logs/g1-push-curriculum/events.out.tfevents.1768064090.datvu-G7-KE.79363.0 b/logs/g1-push-curriculum/events.out.tfevents.1768064090.datvu-G7-KE.79363.0
--deleted file mode 100644
--index 8f76f4f..0000000
--Binary files a/logs/g1-push-curriculum/events.out.tfevents.1768064090.datvu-G7-KE.79363.0 and /dev/null differ
--diff --git a/logs/g1-push-curriculum/model_0.pt b/logs/g1-push-curriculum/model_0.pt
--deleted file mode 100644
--index b4c0d52..0000000
--Binary files a/logs/g1-push-curriculum/model_0.pt and /dev/null differ
--diff --git a/logs/g1-push-curriculum/model_100.pt b/logs/g1-push-curriculum/model_100.pt
--deleted file mode 100644
--index 14fa6d4..0000000
--Binary files a/logs/g1-push-curriculum/model_100.pt and /dev/null differ
--diff --git a/logs/g1-push-curriculum/model_150.pt b/logs/g1-push-curriculum/model_150.pt
--deleted file mode 100644
--index 3f010a2..0000000
--Binary files a/logs/g1-push-curriculum/model_150.pt and /dev/null differ
--diff --git a/logs/g1-push-curriculum/model_200.pt b/logs/g1-push-curriculum/model_200.pt
--deleted file mode 100644
--index a6c791e..0000000
--Binary files a/logs/g1-push-curriculum/model_200.pt and /dev/null differ
--diff --git a/logs/g1-push-curriculum/model_250.pt b/logs/g1-push-curriculum/model_250.pt
--deleted file mode 100644
--index 50e02ff..0000000
--Binary files a/logs/g1-push-curriculum/model_250.pt and /dev/null differ
--diff --git a/logs/g1-push-curriculum/model_300.pt b/logs/g1-push-curriculum/model_300.pt
--deleted file mode 100644
--index 62e82a0..0000000
--Binary files a/logs/g1-push-curriculum/model_300.pt and /dev/null differ
--diff --git a/logs/g1-push-curriculum/model_350.pt b/logs/g1-push-curriculum/model_350.pt
--deleted file mode 100644
--index b13d153..0000000
--Binary files a/logs/g1-push-curriculum/model_350.pt and /dev/null differ
--diff --git a/logs/g1-push-curriculum/model_400.pt b/logs/g1-push-curriculum/model_400.pt
--deleted file mode 100644
--index dffd874..0000000
--Binary files a/logs/g1-push-curriculum/model_400.pt and /dev/null differ
--diff --git a/logs/g1-push-curriculum/model_450.pt b/logs/g1-push-curriculum/model_450.pt
--deleted file mode 100644
--index db529a3..0000000
--Binary files a/logs/g1-push-curriculum/model_450.pt and /dev/null differ
--diff --git a/logs/g1-push-curriculum/model_50.pt b/logs/g1-push-curriculum/model_50.pt
--deleted file mode 100644
--index fe69023..0000000
--Binary files a/logs/g1-push-curriculum/model_50.pt and /dev/null differ
--diff --git a/logs/g1-push-curriculum/model_500.pt b/logs/g1-push-curriculum/model_500.pt
--deleted file mode 100644
--index 3e7310d..0000000
--Binary files a/logs/g1-push-curriculum/model_500.pt and /dev/null differ
--diff --git a/logs/g1-push-curriculum/model_550.pt b/logs/g1-push-curriculum/model_550.pt
--deleted file mode 100644
--index ee76b80..0000000
--Binary files a/logs/g1-push-curriculum/model_550.pt and /dev/null differ
--diff --git a/logs/g1-push-curriculum/model_600.pt b/logs/g1-push-curriculum/model_600.pt
--deleted file mode 100644
--index 8fb0b94..0000000
--Binary files a/logs/g1-push-curriculum/model_600.pt and /dev/null differ
--diff --git a/logs/g1-push-curriculum/model_650.pt b/logs/g1-push-curriculum/model_650.pt
--deleted file mode 100644
--index 60dcaa4..0000000
--Binary files a/logs/g1-push-curriculum/model_650.pt and /dev/null differ
--diff --git a/logs/g1-push-curriculum/model_700.pt b/logs/g1-push-curriculum/model_700.pt
--deleted file mode 100644
--index 7c0d8d3..0000000
--Binary files a/logs/g1-push-curriculum/model_700.pt and /dev/null differ
--diff --git a/logs/g1-push-curriculum/model_750.pt b/logs/g1-push-curriculum/model_750.pt
--deleted file mode 100644
--index 6d2c572..0000000
--Binary files a/logs/g1-push-curriculum/model_750.pt and /dev/null differ
--diff --git a/logs/g1-push-curriculum/model_800.pt b/logs/g1-push-curriculum/model_800.pt
--deleted file mode 100644
--index 9ef0291..0000000
--Binary files a/logs/g1-push-curriculum/model_800.pt and /dev/null differ
--diff --git a/logs/g1-push-curriculum/model_850.pt b/logs/g1-push-curriculum/model_850.pt
--deleted file mode 100644
--index b864f7a..0000000
--Binary files a/logs/g1-push-curriculum/model_850.pt and /dev/null differ
--diff --git a/logs/g1-push-curriculum/model_900.pt b/logs/g1-push-curriculum/model_900.pt
--deleted file mode 100644
--index 88d4daa..0000000
--Binary files a/logs/g1-push-curriculum/model_900.pt and /dev/null differ
--diff --git a/logs/g1-push-curriculum/model_950.pt b/logs/g1-push-curriculum/model_950.pt
--deleted file mode 100644
--index 52c4d81..0000000
--Binary files a/logs/g1-push-curriculum/model_950.pt and /dev/null differ
--diff --git a/logs/g1-push-curriculum/model_999.pt b/logs/g1-push-curriculum/model_999.pt
--deleted file mode 100644
--index 57fd5b5..0000000
--Binary files a/logs/g1-push-curriculum/model_999.pt and /dev/null differ
 -diff --git a/logs/g1-push/cfgs.pkl b/logs/g1-push/cfgs.pkl
--index 83aae0a..9baaeb3 100644
+-index 9baaeb3..c49d122 100644
 -Binary files a/logs/g1-push/cfgs.pkl and b/logs/g1-push/cfgs.pkl differ
--diff --git a/logs/g1-push/events.out.tfevents.1768222189.datvu-G7-KE.48412.0 b/logs/g1-push/events.out.tfevents.1768222189.datvu-G7-KE.48412.0
+-diff --git a/logs/g1-push/events.out.tfevents.1768228235.datvu-G7-KE.68093.0 b/logs/g1-push/events.out.tfevents.1768228235.datvu-G7-KE.68093.0
 -deleted file mode 100644
--index 3ec373f..0000000
--Binary files a/logs/g1-push/events.out.tfevents.1768222189.datvu-G7-KE.48412.0 and /dev/null differ
+-index b7f2daf..0000000
+-Binary files a/logs/g1-push/events.out.tfevents.1768228235.datvu-G7-KE.68093.0 and /dev/null differ
+-diff --git a/logs/g1-push/git/humanoid_g1_ws.diff b/logs/g1-push/git/humanoid_g1_ws.diff
+-index e2a7a94..e69de29 100644
+---- a/logs/g1-push/git/humanoid_g1_ws.diff
+-+++ b/logs/g1-push/git/humanoid_g1_ws.diff
+-@@ -1,193 +0,0 @@
+----- git status ---
+--On branch main
+--Your branch is up to date with 'origin/main'.
+--
+--Changes not staged for commit:
+--  (use "git add/rm <file>..." to update what will be committed)
+--  (use "git restore <file>..." to discard changes in working directory)
+--	deleted:    logs/g1-push-curriculum/cfgs.pkl
+--	deleted:    logs/g1-push-curriculum/events.out.tfevents.1768064090.datvu-G7-KE.79363.0
+--	deleted:    logs/g1-push-curriculum/model_0.pt
+--	deleted:    logs/g1-push-curriculum/model_100.pt
+--	deleted:    logs/g1-push-curriculum/model_150.pt
+--	deleted:    logs/g1-push-curriculum/model_200.pt
+--	deleted:    logs/g1-push-curriculum/model_250.pt
+--	deleted:    logs/g1-push-curriculum/model_300.pt
+--	deleted:    logs/g1-push-curriculum/model_350.pt
+--	deleted:    logs/g1-push-curriculum/model_400.pt
+--	deleted:    logs/g1-push-curriculum/model_450.pt
+--	deleted:    logs/g1-push-curriculum/model_50.pt
+--	deleted:    logs/g1-push-curriculum/model_500.pt
+--	deleted:    logs/g1-push-curriculum/model_550.pt
+--	deleted:    logs/g1-push-curriculum/model_600.pt
+--	deleted:    logs/g1-push-curriculum/model_650.pt
+--	deleted:    logs/g1-push-curriculum/model_700.pt
+--	deleted:    logs/g1-push-curriculum/model_750.pt
+--	deleted:    logs/g1-push-curriculum/model_800.pt
+--	deleted:    logs/g1-push-curriculum/model_850.pt
+--	deleted:    logs/g1-push-curriculum/model_900.pt
+--	deleted:    logs/g1-push-curriculum/model_950.pt
+--	deleted:    logs/g1-push-curriculum/model_999.pt
+--	modified:   logs/g1-push/cfgs.pkl
+--	deleted:    logs/g1-push/events.out.tfevents.1768222189.datvu-G7-KE.48412.0
+--	modified:   logs/g1-push/model_0.pt
+--	deleted:    logs/g1-push/model_50.pt
+--	modified:   src/g1_eval.py
+--	modified:   src/g1_train.py
+--
+--Untracked files:
+--  (use "git add <file>..." to include in what will be committed)
+--	logs/g1-push/events.out.tfevents.1768228235.datvu-G7-KE.68093.0
+--	logs/g1-push/git/
+--
+--no changes added to commit (use "git add" and/or "git commit -a") 
+--
+--
+----- git diff ---
+--diff --git a/logs/g1-push-curriculum/cfgs.pkl b/logs/g1-push-curriculum/cfgs.pkl
+--deleted file mode 100644
+--index 7dfe176..0000000
+--Binary files a/logs/g1-push-curriculum/cfgs.pkl and /dev/null differ
+--diff --git a/logs/g1-push-curriculum/events.out.tfevents.1768064090.datvu-G7-KE.79363.0 b/logs/g1-push-curriculum/events.out.tfevents.1768064090.datvu-G7-KE.79363.0
+--deleted file mode 100644
+--index 8f76f4f..0000000
+--Binary files a/logs/g1-push-curriculum/events.out.tfevents.1768064090.datvu-G7-KE.79363.0 and /dev/null differ
+--diff --git a/logs/g1-push-curriculum/model_0.pt b/logs/g1-push-curriculum/model_0.pt
+--deleted file mode 100644
+--index b4c0d52..0000000
+--Binary files a/logs/g1-push-curriculum/model_0.pt and /dev/null differ
+--diff --git a/logs/g1-push-curriculum/model_100.pt b/logs/g1-push-curriculum/model_100.pt
+--deleted file mode 100644
+--index 14fa6d4..0000000
+--Binary files a/logs/g1-push-curriculum/model_100.pt and /dev/null differ
+--diff --git a/logs/g1-push-curriculum/model_150.pt b/logs/g1-push-curriculum/model_150.pt
+--deleted file mode 100644
+--index 3f010a2..0000000
+--Binary files a/logs/g1-push-curriculum/model_150.pt and /dev/null differ
+--diff --git a/logs/g1-push-curriculum/model_200.pt b/logs/g1-push-curriculum/model_200.pt
+--deleted file mode 100644
+--index a6c791e..0000000
+--Binary files a/logs/g1-push-curriculum/model_200.pt and /dev/null differ
+--diff --git a/logs/g1-push-curriculum/model_250.pt b/logs/g1-push-curriculum/model_250.pt
+--deleted file mode 100644
+--index 50e02ff..0000000
+--Binary files a/logs/g1-push-curriculum/model_250.pt and /dev/null differ
+--diff --git a/logs/g1-push-curriculum/model_300.pt b/logs/g1-push-curriculum/model_300.pt
+--deleted file mode 100644
+--index 62e82a0..0000000
+--Binary files a/logs/g1-push-curriculum/model_300.pt and /dev/null differ
+--diff --git a/logs/g1-push-curriculum/model_350.pt b/logs/g1-push-curriculum/model_350.pt
+--deleted file mode 100644
+--index b13d153..0000000
+--Binary files a/logs/g1-push-curriculum/model_350.pt and /dev/null differ
+--diff --git a/logs/g1-push-curriculum/model_400.pt b/logs/g1-push-curriculum/model_400.pt
+--deleted file mode 100644
+--index dffd874..0000000
+--Binary files a/logs/g1-push-curriculum/model_400.pt and /dev/null differ
+--diff --git a/logs/g1-push-curriculum/model_450.pt b/logs/g1-push-curriculum/model_450.pt
+--deleted file mode 100644
+--index db529a3..0000000
+--Binary files a/logs/g1-push-curriculum/model_450.pt and /dev/null differ
+--diff --git a/logs/g1-push-curriculum/model_50.pt b/logs/g1-push-curriculum/model_50.pt
+--deleted file mode 100644
+--index fe69023..0000000
+--Binary files a/logs/g1-push-curriculum/model_50.pt and /dev/null differ
+--diff --git a/logs/g1-push-curriculum/model_500.pt b/logs/g1-push-curriculum/model_500.pt
+--deleted file mode 100644
+--index 3e7310d..0000000
+--Binary files a/logs/g1-push-curriculum/model_500.pt and /dev/null differ
+--diff --git a/logs/g1-push-curriculum/model_550.pt b/logs/g1-push-curriculum/model_550.pt
+--deleted file mode 100644
+--index ee76b80..0000000
+--Binary files a/logs/g1-push-curriculum/model_550.pt and /dev/null differ
+--diff --git a/logs/g1-push-curriculum/model_600.pt b/logs/g1-push-curriculum/model_600.pt
+--deleted file mode 100644
+--index 8fb0b94..0000000
+--Binary files a/logs/g1-push-curriculum/model_600.pt and /dev/null differ
+--diff --git a/logs/g1-push-curriculum/model_650.pt b/logs/g1-push-curriculum/model_650.pt
+--deleted file mode 100644
+--index 60dcaa4..0000000
+--Binary files a/logs/g1-push-curriculum/model_650.pt and /dev/null differ
+--diff --git a/logs/g1-push-curriculum/model_700.pt b/logs/g1-push-curriculum/model_700.pt
+--deleted file mode 100644
+--index 7c0d8d3..0000000
+--Binary files a/logs/g1-push-curriculum/model_700.pt and /dev/null differ
+--diff --git a/logs/g1-push-curriculum/model_750.pt b/logs/g1-push-curriculum/model_750.pt
+--deleted file mode 100644
+--index 6d2c572..0000000
+--Binary files a/logs/g1-push-curriculum/model_750.pt and /dev/null differ
+--diff --git a/logs/g1-push-curriculum/model_800.pt b/logs/g1-push-curriculum/model_800.pt
+--deleted file mode 100644
+--index 9ef0291..0000000
+--Binary files a/logs/g1-push-curriculum/model_800.pt and /dev/null differ
+--diff --git a/logs/g1-push-curriculum/model_850.pt b/logs/g1-push-curriculum/model_850.pt
+--deleted file mode 100644
+--index b864f7a..0000000
+--Binary files a/logs/g1-push-curriculum/model_850.pt and /dev/null differ
+--diff --git a/logs/g1-push-curriculum/model_900.pt b/logs/g1-push-curriculum/model_900.pt
+--deleted file mode 100644
+--index 88d4daa..0000000
+--Binary files a/logs/g1-push-curriculum/model_900.pt and /dev/null differ
+--diff --git a/logs/g1-push-curriculum/model_950.pt b/logs/g1-push-curriculum/model_950.pt
+--deleted file mode 100644
+--index 52c4d81..0000000
+--Binary files a/logs/g1-push-curriculum/model_950.pt and /dev/null differ
+--diff --git a/logs/g1-push-curriculum/model_999.pt b/logs/g1-push-curriculum/model_999.pt
+--deleted file mode 100644
+--index 57fd5b5..0000000
+--Binary files a/logs/g1-push-curriculum/model_999.pt and /dev/null differ
+--diff --git a/logs/g1-push/cfgs.pkl b/logs/g1-push/cfgs.pkl
+--index 83aae0a..9baaeb3 100644
+--Binary files a/logs/g1-push/cfgs.pkl and b/logs/g1-push/cfgs.pkl differ
+--diff --git a/logs/g1-push/events.out.tfevents.1768222189.datvu-G7-KE.48412.0 b/logs/g1-push/events.out.tfevents.1768222189.datvu-G7-KE.48412.0
+--deleted file mode 100644
+--index 3ec373f..0000000
+--Binary files a/logs/g1-push/events.out.tfevents.1768222189.datvu-G7-KE.48412.0 and /dev/null differ
+--diff --git a/logs/g1-push/model_0.pt b/logs/g1-push/model_0.pt
+--index 78c6bd8..094db02 100644
+--Binary files a/logs/g1-push/model_0.pt and b/logs/g1-push/model_0.pt differ
+--diff --git a/logs/g1-push/model_50.pt b/logs/g1-push/model_50.pt
+--deleted file mode 100644
+--index 86b1899..0000000
+--Binary files a/logs/g1-push/model_50.pt and /dev/null differ
+--diff --git a/src/g1_eval.py b/src/g1_eval.py
+--index 2e8693f..58bb615 100644
+----- a/src/g1_eval.py
+--+++ b/src/g1_eval.py
+--@@ -26,7 +26,7 @@ from g1_env import g1Env
+-- def main():
+--     parser = argparse.ArgumentParser()
+--     parser.add_argument("-e", "--exp_name", type=str, default="g1-push")
+---    parser.add_argument("--ckpt", type=int, default=999)
+--+    parser.add_argument("--ckpt", type=int, default=900)
+--     args = parser.parse_args()
+-- 
+--     gs.init(backend=gs.gpu, precision="32", logging_level="warning")
+--@@ -42,10 +42,10 @@ def main():
+--     env_cfg["push_params"].update(
+--         {
+--             "enable": True,
+---            "min_force": 1200.0,  # Apply max force
+---            "max_force": 1200.0,
+---            "start_interval": 100,  # Push every 2 seconds
+---            "end_interval": 100,
+--+            "min_force": 2000.0,  # Apply max force
+--+            "max_force": 2000.0,
+--+            "start_interval": 50,  # Push every 1 seconds
+--+            "end_interval": 50,
+--             "curriculum_steps": 1,  # Skip curriculum
+--         }
+--     )
+--diff --git a/src/g1_train.py b/src/g1_train.py
+--index f9a77b1..3257927 100644
+----- a/src/g1_train.py
+--+++ b/src/g1_train.py
+--@@ -73,7 +73,7 @@ def get_cfgs():
+--         "num_actions": 29,
+--         "push_params": {
+--             "enable": True,
+---            "max_force": 1200.0,  # Max push force
+--+            "max_force": 2000.0,  # Max push force
+--             "min_force": 50.0,
+--             "start_interval": 100,
+--             "end_interval": 50,
+-\ No newline at end of file
 -diff --git a/logs/g1-push/model_0.pt b/logs/g1-push/model_0.pt
--index 78c6bd8..094db02 100644
+-index 094db02..4cc27bd 100644
 -Binary files a/logs/g1-push/model_0.pt and b/logs/g1-push/model_0.pt differ
+-diff --git a/logs/g1-push/model_100.pt b/logs/g1-push/model_100.pt
+-deleted file mode 100644
+-index f5fa433..0000000
+-Binary files a/logs/g1-push/model_100.pt and /dev/null differ
+-diff --git a/logs/g1-push/model_150.pt b/logs/g1-push/model_150.pt
+-deleted file mode 100644
+-index f64918e..0000000
+-Binary files a/logs/g1-push/model_150.pt and /dev/null differ
+-diff --git a/logs/g1-push/model_200.pt b/logs/g1-push/model_200.pt
+-deleted file mode 100644
+-index 42e9a64..0000000
+-Binary files a/logs/g1-push/model_200.pt and /dev/null differ
+-diff --git a/logs/g1-push/model_250.pt b/logs/g1-push/model_250.pt
+-deleted file mode 100644
+-index 8a6d0fb..0000000
+-Binary files a/logs/g1-push/model_250.pt and /dev/null differ
+-diff --git a/logs/g1-push/model_300.pt b/logs/g1-push/model_300.pt
+-deleted file mode 100644
+-index 82269af..0000000
+-Binary files a/logs/g1-push/model_300.pt and /dev/null differ
+-diff --git a/logs/g1-push/model_350.pt b/logs/g1-push/model_350.pt
+-deleted file mode 100644
+-index 4bd5dd1..0000000
+-Binary files a/logs/g1-push/model_350.pt and /dev/null differ
+-diff --git a/logs/g1-push/model_400.pt b/logs/g1-push/model_400.pt
+-deleted file mode 100644
+-index 65a4e63..0000000
+-Binary files a/logs/g1-push/model_400.pt and /dev/null differ
+-diff --git a/logs/g1-push/model_450.pt b/logs/g1-push/model_450.pt
+-deleted file mode 100644
+-index 3e53c34..0000000
+-Binary files a/logs/g1-push/model_450.pt and /dev/null differ
 -diff --git a/logs/g1-push/model_50.pt b/logs/g1-push/model_50.pt
 -deleted file mode 100644
--index 86b1899..0000000
+-index 167911f..0000000
 -Binary files a/logs/g1-push/model_50.pt and /dev/null differ
+-diff --git a/logs/g1-push/model_500.pt b/logs/g1-push/model_500.pt
+-deleted file mode 100644
+-index 00548c2..0000000
+-Binary files a/logs/g1-push/model_500.pt and /dev/null differ
+-diff --git a/logs/g1-push/model_550.pt b/logs/g1-push/model_550.pt
+-deleted file mode 100644
+-index 26c1542..0000000
+-Binary files a/logs/g1-push/model_550.pt and /dev/null differ
+-diff --git a/logs/g1-push/model_600.pt b/logs/g1-push/model_600.pt
+-deleted file mode 100644
+-index 996eb38..0000000
+-Binary files a/logs/g1-push/model_600.pt and /dev/null differ
+-diff --git a/logs/g1-push/model_650.pt b/logs/g1-push/model_650.pt
+-deleted file mode 100644
+-index 9a57764..0000000
+-Binary files a/logs/g1-push/model_650.pt and /dev/null differ
+-diff --git a/logs/g1-push/model_700.pt b/logs/g1-push/model_700.pt
+-deleted file mode 100644
+-index 83da2bc..0000000
+-Binary files a/logs/g1-push/model_700.pt and /dev/null differ
+-diff --git a/logs/g1-push/model_750.pt b/logs/g1-push/model_750.pt
+-deleted file mode 100644
+-index 303b7a2..0000000
+-Binary files a/logs/g1-push/model_750.pt and /dev/null differ
+-diff --git a/logs/g1-push/model_800.pt b/logs/g1-push/model_800.pt
+-deleted file mode 100644
+-index 558d998..0000000
+-Binary files a/logs/g1-push/model_800.pt and /dev/null differ
 -diff --git a/src/g1_eval.py b/src/g1_eval.py
--index 2e8693f..58bb615 100644
+-index 58bb615..cbe3ffa 100644
 ---- a/src/g1_eval.py
 -+++ b/src/g1_eval.py
 -@@ -26,7 +26,7 @@ from g1_env import g1Env
 - def main():
 -     parser = argparse.ArgumentParser()
 -     parser.add_argument("-e", "--exp_name", type=str, default="g1-push")
---    parser.add_argument("--ckpt", type=int, default=999)
--+    parser.add_argument("--ckpt", type=int, default=900)
+--    parser.add_argument("--ckpt", type=int, default=900)
+-+    parser.add_argument("--ckpt", type=int, default=850)
 -     args = parser.parse_args()
 - 
 -     gs.init(backend=gs.gpu, precision="32", logging_level="warning")
--@@ -42,10 +42,10 @@ def main():
--     env_cfg["push_params"].update(
--         {
--             "enable": True,
---            "min_force": 1200.0,  # Apply max force
---            "max_force": 1200.0,
---            "start_interval": 100,  # Push every 2 seconds
---            "end_interval": 100,
--+            "min_force": 2000.0,  # Apply max force
--+            "max_force": 2000.0,
--+            "start_interval": 50,  # Push every 1 seconds
--+            "end_interval": 50,
--             "curriculum_steps": 1,  # Skip curriculum
--         }
--     )
 -diff --git a/src/g1_train.py b/src/g1_train.py
--index f9a77b1..3257927 100644
+-index 13ed13e..dab28bf 100644
 ---- a/src/g1_train.py
 -+++ b/src/g1_train.py
 -@@ -73,7 +73,7 @@ def get_cfgs():
 -         "num_actions": 29,
 -         "push_params": {
 -             "enable": True,
---            "max_force": 1200.0,  # Max push force
--+            "max_force": 2000.0,  # Max push force
+--            "max_force": 2000.0,  # Max push force
+-+            "max_force": 1500.0,  # Max push force
 -             "min_force": 50.0,
 -             "start_interval": 100,
 -             "end_interval": 50,
 \ No newline at end of file
 diff --git a/logs/g1-push/model_0.pt b/logs/g1-push/model_0.pt
-index 094db02..4cc27bd 100644
+index 4cc27bd..109fbb2 100644
 Binary files a/logs/g1-push/model_0.pt and b/logs/g1-push/model_0.pt differ
 diff --git a/logs/g1-push/model_100.pt b/logs/g1-push/model_100.pt
 deleted file mode 100644
-index f5fa433..0000000
+index 551b48b..0000000
 Binary files a/logs/g1-push/model_100.pt and /dev/null differ
 diff --git a/logs/g1-push/model_150.pt b/logs/g1-push/model_150.pt
 deleted file mode 100644
-index f64918e..0000000
+index 25fd7f7..0000000
 Binary files a/logs/g1-push/model_150.pt and /dev/null differ
 diff --git a/logs/g1-push/model_200.pt b/logs/g1-push/model_200.pt
 deleted file mode 100644
-index 42e9a64..0000000
+index c4eeff3..0000000
 Binary files a/logs/g1-push/model_200.pt and /dev/null differ
 diff --git a/logs/g1-push/model_250.pt b/logs/g1-push/model_250.pt
 deleted file mode 100644
-index 8a6d0fb..0000000
+index 6665c8b..0000000
 Binary files a/logs/g1-push/model_250.pt and /dev/null differ
 diff --git a/logs/g1-push/model_300.pt b/logs/g1-push/model_300.pt
 deleted file mode 100644
-index 82269af..0000000
+index a178765..0000000
 Binary files a/logs/g1-push/model_300.pt and /dev/null differ
-diff --git a/logs/g1-push/model_350.pt b/logs/g1-push/model_350.pt
-deleted file mode 100644
-index 4bd5dd1..0000000
-Binary files a/logs/g1-push/model_350.pt and /dev/null differ
-diff --git a/logs/g1-push/model_400.pt b/logs/g1-push/model_400.pt
-deleted file mode 100644
-index 65a4e63..0000000
-Binary files a/logs/g1-push/model_400.pt and /dev/null differ
-diff --git a/logs/g1-push/model_450.pt b/logs/g1-push/model_450.pt
-deleted file mode 100644
-index 3e53c34..0000000
-Binary files a/logs/g1-push/model_450.pt and /dev/null differ
 diff --git a/logs/g1-push/model_50.pt b/logs/g1-push/model_50.pt
 deleted file mode 100644
-index 167911f..0000000
+index b57b532..0000000
 Binary files a/logs/g1-push/model_50.pt and /dev/null differ
-diff --git a/logs/g1-push/model_500.pt b/logs/g1-push/model_500.pt
-deleted file mode 100644
-index 00548c2..0000000
-Binary files a/logs/g1-push/model_500.pt and /dev/null differ
-diff --git a/logs/g1-push/model_550.pt b/logs/g1-push/model_550.pt
-deleted file mode 100644
-index 26c1542..0000000
-Binary files a/logs/g1-push/model_550.pt and /dev/null differ
-diff --git a/logs/g1-push/model_600.pt b/logs/g1-push/model_600.pt
-deleted file mode 100644
-index 996eb38..0000000
-Binary files a/logs/g1-push/model_600.pt and /dev/null differ
-diff --git a/logs/g1-push/model_650.pt b/logs/g1-push/model_650.pt
-deleted file mode 100644
-index 9a57764..0000000
-Binary files a/logs/g1-push/model_650.pt and /dev/null differ
-diff --git a/logs/g1-push/model_700.pt b/logs/g1-push/model_700.pt
-deleted file mode 100644
-index 83da2bc..0000000
-Binary files a/logs/g1-push/model_700.pt and /dev/null differ
-diff --git a/logs/g1-push/model_750.pt b/logs/g1-push/model_750.pt
-deleted file mode 100644
-index 303b7a2..0000000
-Binary files a/logs/g1-push/model_750.pt and /dev/null differ
-diff --git a/logs/g1-push/model_800.pt b/logs/g1-push/model_800.pt
-deleted file mode 100644
-index 558d998..0000000
-Binary files a/logs/g1-push/model_800.pt and /dev/null differ
-diff --git a/src/g1_eval.py b/src/g1_eval.py
-index 58bb615..cbe3ffa 100644
---- a/src/g1_eval.py
-+++ b/src/g1_eval.py
-@@ -26,7 +26,7 @@ from g1_env import g1Env
- def main():
-     parser = argparse.ArgumentParser()
-     parser.add_argument("-e", "--exp_name", type=str, default="g1-push")
--    parser.add_argument("--ckpt", type=int, default=900)
-+    parser.add_argument("--ckpt", type=int, default=850)
-     args = parser.parse_args()
- 
-     gs.init(backend=gs.gpu, precision="32", logging_level="warning")
-diff --git a/src/g1_train.py b/src/g1_train.py
-index 13ed13e..dab28bf 100644
---- a/src/g1_train.py
-+++ b/src/g1_train.py
-@@ -73,7 +73,7 @@ def get_cfgs():
-         "num_actions": 29,
-         "push_params": {
-             "enable": True,
--            "max_force": 2000.0,  # Max push force
-+            "max_force": 1500.0,  # Max push force
-             "min_force": 50.0,
-             "start_interval": 100,
-             "end_interval": 50,

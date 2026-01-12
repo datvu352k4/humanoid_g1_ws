@@ -318,7 +318,10 @@ class g1Env:
                 link_name = self.idx_to_name_map.get(chosen_link_idx, "Unknown")
 
                 print(
-                    f"[Push] Target: {link_name:20s} | Force: {force_magnitude:.1f} N (Max allowed: {current_force:.1f})"
+                    f"[Push] Target: {link_name:20s} | "
+                    f"Force: {force_magnitude:.1f} N | "
+                    f"Direction: X={random_dir[0, 0, 0].item():+.2f}, Y={random_dir[0, 0, 1].item():+.2f} "
+                    f"(Max allowed: {current_force:.1f}) "
                 )
                 # Apply External Force to Physics Engine
                 self.rigid_solver.apply_links_external_force(
