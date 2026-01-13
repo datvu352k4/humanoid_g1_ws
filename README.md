@@ -93,7 +93,7 @@ The reward function is designed to help robot standing while enforcing stability
 Track $v_x, v_y$ references commanded.
 
 ```math
-$$R_{lin\_vel} = \exp \left( \frac{- \| \mathbf{v}^{cmd}_{xy} - \mathbf{v}_{xy} \|^2}{\sigma} \right)$$
+$$R_{lin\_vel} = \exp \left( \frac{- {\mathbf{v}^{cmd}_{xy} - \mathbf{v}_{xy}}^2}{\sigma} \right)$$
 ```
 
 Where:
