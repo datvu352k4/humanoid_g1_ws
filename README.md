@@ -176,6 +176,12 @@ Although the primary task is to stand still, the Tracking reward is essential. B
 
 ## 4. Results & Performance
 
+<p align="center">
+  <img src="docs/Mean_reward.png" width="45%" title="Reward Mean">
+  <img src="docs/Mean_episode_length.png" width="45%" title="Episode Length">
+  <br>
+  <em>Left: Episode Reward Mean. Right: Episode Length (Curriculum Progress).</em>
+</p>
 
 ## 5. Project Structure
 
