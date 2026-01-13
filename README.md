@@ -184,8 +184,7 @@ Although the primary task is to stand still, the Tracking reward is essential. B
 Mean reward decreases as the curriculum introduces higher impact forces, forcing the agent to deviate from the nominal pose to maintain balance. However, the consistent episode length demonstrates the policy's robustness and ability to prevent falls.
 
 - Demo
-<video src="docs/demo.mp4" controls="controls" style="max-width: 700px;">
-</video>
+<video src="docs/demo.mp4" width="922" height="525" controls></video>
 ## 5. Project Structure
 
 ```
