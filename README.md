@@ -185,6 +185,7 @@ Mean reward decreases as the curriculum introduces higher impact forces, forcing
 
 - Demo
 <video src="docs/demo.mp4" width="922" height="525" controls></video>
+
 ## 5. Project Structure
 
 ```
