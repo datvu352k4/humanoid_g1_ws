@@ -6,7 +6,7 @@
 ## 1. Project Overview
 This project implements a **Reinforcement Learning (RL)** policy for the **Unitree G1 Humanoid** robot using **Genesis Sim**. 
 
-The goal is to achieve **Robust Push Recovery**: training the robot to maintain balance and recover from significant external forces (up to 1500N in 1 step) while tracking zero-velocity commands (standing still).
+The goal is to achieve **Robust Push Recovery**: training the robot to maintain balance and recover from external forces (up to 1500N in 1 step) while tracking zero-velocity commands (standing still).
 
 ## 2. CLI Documentation (How to Run)
 ### Installation
@@ -23,10 +23,10 @@ cd humanoid_g1_ws
 source venv/bin/activate
 python src/g1_train.py --exp_name g1-push --num_envs 8192 --max_iterations 1000
 ```
-Output: Checkpoints are saved in logs/g1-push.
+Checkpoints are saved in logs/g1-push.
 
 ### Evaluation 
-To visualize the trained policy and test robustness against Maximum Force:
+To visualize the trained policy and test robustness against maximum force:
 ```bash 
 cd humanoid_g1_ws
 source venv/bin/activate
@@ -174,7 +174,10 @@ Where:
 
 Although the primary task is to stand still, the Tracking reward is essential. By setting the target velocity to zero, these terms effectively function as a stationarity objective, training the policy to actively cancel out any momentum induced by external pushes to return to a halt.
 
-## 4. Project Structure
+## 4. Results & Performance
+
+
+## 5. Project Structure
 
 ```
 .

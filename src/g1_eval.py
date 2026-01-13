@@ -44,8 +44,8 @@ def main():
             "enable": True,
             "min_force": 1500.0,  # Apply max force
             "max_force": 1500.0,
-            "start_interval": 50,  # Push every 1 seconds
-            "end_interval": 50,
+            "start_interval": 100,  # Push every 1 seconds
+            "end_interval": 100,
             "curriculum_steps": 1,  # Skip curriculum
         }
     )
