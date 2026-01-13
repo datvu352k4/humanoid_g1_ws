@@ -175,11 +175,17 @@ Where:
 Although the primary task is to stand still, the Tracking reward is essential. By setting the target velocity to zero, these terms effectively function as a stationarity objective, training the policy to actively cancel out any momentum induced by external pushes to return to a halt.
 
 ## 4. Results & Performance
-
+- Mean reward
 ![Mean reward](docs/Mean_reward.png)
 
-![Mean episode length](docs/Mean_episode_reward.png)
+- Mean episode length
+![Mean episode length](docs/Mean_episode_length.png)
+ 
+Mean reward decreases as the curriculum introduces higher impact forces, forcing the agent to deviate from the nominal pose to maintain balance. However, the consistent episode length demonstrates the policy's robustness and ability to prevent falls.
 
+- Demo
+<video src="docs/demo.mp4" controls="controls" style="max-width: 700px;">
+</video>
 ## 5. Project Structure
 
 ```
